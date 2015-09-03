@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 var query="insert into tabla()values()";
 
-$.get('../php/datos.php',{data:query},function(data){
+$.get('php',{data:query},function(data){
  alert(data);
 });
 
