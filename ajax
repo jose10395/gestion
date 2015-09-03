@@ -1,0 +1,15 @@
+<div>
+<!--aqui va el contenido-->
+</div>
+
+<script>
+$(document).ready(function(){
+
+var query="insert into tabla()values()";
+
+$.get('../php/datos.php',{data:query},function(data){
+ alert(data);
+});
+
+});
+</script>
