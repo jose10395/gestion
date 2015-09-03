@@ -1,6 +1,6 @@
 <?php
 
-include_once('../conexiones/Db.php'); 
+include_once('Db.php'); 
 $db = new MySQL();
 if(!empty($_POST['data']))
    {
@@ -9,10 +9,7 @@ if(!empty($_POST['data']))
             if($db->num_rows($consulta)>0)
              {
                  while($row = $db->fetch_array($consulta)){
-                     session_start();
-                     $_SESSION['iduser']=$row['id'];
-                    $_SESSION['username']=$row['nombreusuario'];
-                    $_SESSION['logged']=TRUE;
+                   
                     header("Location:../inicio.php");
                 }
              }  
